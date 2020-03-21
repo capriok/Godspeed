@@ -1,2 +1,3 @@
-# react-stripe-connect-form
-React Stripe Connect form.
+# Godspeed
+
+React Component Library
