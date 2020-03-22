@@ -1,3 +1,5 @@
-.babelrc
 lib
+testing
+.babelrc
+.vscode
 CODE_OF_CONDUCT.md
