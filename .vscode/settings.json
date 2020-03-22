@@ -4,7 +4,7 @@
       {
         "match": "\\.js$",
         "cmd": "npm run build",
-        "useShortcut": true
+        // "useShortcut": true
       }
     ]
   }
