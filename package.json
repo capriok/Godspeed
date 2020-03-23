@@ -1,6 +1,6 @@
 {
   "name": "godspeed",
-  "version": "1.1.2",
+  "version": "1.1.33",
   "description": "styled components",
   "main": "build/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "polished": "^3.5.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "styled-components": "^2.2.3"
