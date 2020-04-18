@@ -1,39 +1,33 @@
 <p align="center">
-  <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="150" src="https://i.imgur.com/xXLjICz.png" alt="Material-UI logo"></a>
+  <a href="https://godspeed.netlify.app/" rel="noopener" target="_blank"><img width="150" src="https://i.imgur.com/xXLjICz.png" alt="Material-UI logo"></a>
 </p>
 
 <h1 align="center">Godspeed</h1>
 
-[React](https://www.npmjs.com/package/godspeed) Component Library designed with [Styled-Components](https://styled-components.com/) to make your life easier. Code more, design less.
+[React](https://reactjs.org/) Component Library designed with [Styled-Components](https://styled-components.com/) to make your life easier. Code more, design less.
 
 # Installation
 
 Godspeed is available as an [npm package](https://www.npmjs.com/package/godspeed)
 
 ```sh
-// npm
 npm install godspeed
 ```
  Installation via yarn coming with the release of version 2
 
 ## Usage
 ```js
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Modal from 'godspeed/build/Modal';
+import Button from 'godspeed/build/Button';
 
 function App() {
-  const [modal, openModal] = useState(false)
-
   return (
-    <Modal onClick={() => openModal(!modal)} open={modal}>
-      Hello from a Godspeed modal
-    </Modal>
+    <Button onClick={() => console.log('Godspeed')} />
   );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
 ```
 [![Edit Button](https://svgshare.com/i/KAx.svg)](https://codesandbox.io/s/godspeed-3zimc)
 
