@@ -3,9 +3,8 @@
 </p>
 
 <h1 align="center">Godspeed</h1>
-<p>
+
 [React](https://www.npmjs.com/package/godspeed) Component Library using [Styled-Components](https://styled-components.com/), desiged to make your life easier.
-</p>
 
 # Installation
 
@@ -36,7 +35,7 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
-[![Edit Button](https://svgshare.com/i/KAx.svg)](https://codesandbox.io/s/4j7m47vlm4)
+[![Edit Button](https://svgshare.com/i/KAx.svg)](https://codesandbox.io/s/godspeed-3zimc)
 
 
 ## Documentation
