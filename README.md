@@ -1,37 +1,52 @@
-# Godspeed
+<p align="center">
+  <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="150" src="https://i.imgur.com/xXLjICz.png" alt="Material-UI logo"></a>
+</p>
 
-React Component Library  
+<h1 align="center">Godspeed</h1>
+<p>
+[React](https://www.npmjs.com/package/godspeed) Component Library using [Styled-Components](https://styled-components.com/), desiged to make your life easier.
+</p>
 
-//NAVABR  
-import Navbar from 'godspeed/build/Navbar'  
-[ children: el || title(required): string || height: string px || logo: img || shadow || inv ]  
-import NavLink from 'godspeed/build/NavLink'  
-[ text(required): string || to: string ]  
+# Installation
 
-//CARD  
-import Card from 'godspeed/build/Card'  
-[ children: el || bg: string || color: string || border: string color || padding: string px || radius: string px ]  
+Godspeed is available as an [npm package](https://www.npmjs.com/package/godspeed)
 
-//BUTTON  
-import Button from 'godspeed/build/Button'  
-[ text(required): string || to: string || bg: string px || color: string || clear || disabled || shadow ]
+```sh
+// npm
+npm install godspeed
+```
+ Installation via yarn coming with the release of version 2
 
-//MENU (SHITTY, DONT USE)  
-import Menu from 'godspeed/build/Menu'  
-[ children: el || text: string || bg: string px || color: string || open: bool || clear || disabled || gap ]  
-import MenuItem from 'godspeed/build/MenuItem'  
-[ children: el ]  
+## Usage
+```js
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'godspeed/build/Modal';
 
-//INPUT  
-import Input from 'godspeed/build/Input'  
-[ children: el || onChange || value || type: string || placeholder: string || color: string || autoFocus || error || shadow || underlined || disabled ]  
+function App() {
+  const [modal, openModal] = useState(false)
 
-//DRAWER  
-import Drawer from 'godspeed/build/Drawer'  
-[ children: el || onClick || open: bool || bg: string || color: string || padding: string px ]  
+  return (
+    <Modal onClick={() => openModal(!modal)} open={modal}>
+      Hello from a Godspeed modal
+    </Modal>
+  );
+}
 
-//MODAL  
-import Modals from 'godspeed/build/Modal'  
-[ children: el || onClick || open: bool || bg: string || color: string || border: string color || padding: string px || radius: string px || error ]  
+ReactDOM.render(<App />, document.getElementById('root'));
 
-DRAWER AND MODAL MUST BE AT ROOT FOR POSITIONING TO WORK
+```
+[![Edit Button](https://svgshare.com/i/KAx.svg)](https://codesandbox.io/s/4j7m47vlm4)
+
+
+## Documentation
+Check out our [Documentation website](https://godspeed.netlify.app/)
+
+## Patch notes
+A log of recent updates and notes can be found [here](https://godspeed.netlify.app/patchnotes)
+
+## Roadmap
+The future plans and enhancements will be laid out with the release of version 2
+
+## License
+This project is licensed under the terms of the [MIT license](/LICENSE)
