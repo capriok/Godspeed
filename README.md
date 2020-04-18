@@ -4,7 +4,7 @@
 
 <h1 align="center">Godspeed</h1>
 
-[React](https://www.npmjs.com/package/godspeed) Component Library using [Styled-Components](https://styled-components.com/), desiged to make your life easier.
+[React](https://www.npmjs.com/package/godspeed) Component Library designed with [Styled-Components](https://styled-components.com/) to make your life easier. Code more, design less.
 
 # Installation
 
