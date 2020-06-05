@@ -2,9 +2,9 @@
   "saveAndRun": {
     "commands": [
       {
-        "match": "\\.js$",
+        "match": ".js$",
         "cmd": "npm run build",
-        // "useShortcut": true
+        "useShortcut": true
       }
     ]
   }

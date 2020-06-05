@@ -1,10 +1,10 @@
 {
   "name": "godspeed",
-  "version": "1.3.64",
+  "version": "1.4.0",
   "description": "styled components",
-  "main": "build/index.js",
+  "main": "/index.js",
   "scripts": {
-    "build": "babel lib -d build --copy-files",
+    "build": "babel lib -d dist --copy-files",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.1",
@@ -33,9 +34,8 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
-    "polished": "^3.5.1",
     "react": "^16.13.1",
     "react-spring": "^8.0.27",
-    "styled-components": "^2.3.1"
+    "styled-components": "^2.4.1"
   }
 }
