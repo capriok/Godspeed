@@ -1,6 +1,5 @@
 dist
 index.js
-/docs
 /.testing
 
 # Dependency directories
