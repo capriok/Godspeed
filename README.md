@@ -11,7 +11,7 @@
 Godspeed is available as an [npm package](https://www.npmjs.com/package/godspeed)
 
 ```sh
-npm install godspeed
+npm install godspeed --save
 ```
  Installation via yarn coming with the release of version 2
 
@@ -19,7 +19,7 @@ npm install godspeed
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from 'godspeed/build/Button';
+import { Button }  from 'godspeed';
 
 function App() {
   return (
