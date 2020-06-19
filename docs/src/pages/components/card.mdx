@@ -1,0 +1,93 @@
+import SEO from '../../components/seo'
+import { Card } from 'godspeed'
+
+<SEO title="Card" description="hello description" />
+
+# 
+# Card
+## Cards are useful for giving elevation to the body or separating content.
+
+<br/>
+
+```jsx
+import { Card } from 'godspeed'
+```
+<br/>
+
+# Default Cards
+## This component expects children.
+## These come out of the box, light with dark text.
+
+You can pass the "bg" prop to change the background of the card.
+
+You can pass the "color" prop to change the font color of the card.
+
+<main>
+  <section>
+    <Card className="card">
+      <h1 style={{}}>Card Title</h1>
+      <p>Some placeholder content</p>
+    </Card>
+  </section>
+  <section>
+    <Card className="card" bg="rgb(17, 17, 17)" color="white">
+      <h1 style={{}}>Card Title</h1>
+      <p>Some placeholder content</p>
+    </Card>
+  </section>
+</main>
+
+```jsx
+<Card className="card">
+  <h1>Card Title</h1>
+  <p>Some placeholder content</p>
+</Card>
+<Card className="card" bg="black" color="white">
+  <h1>Card Title</h1>
+  <p>Some placeholder content</p>
+</Card>
+```
+
+# Customized Cards
+
+You can pass the "borderBg" prop to change the border color.
+
+You can pass the "padding" prop to change the padding inside the card.
+
+You can pass the "radius" prop to change the border radius of the card.
+
+<main>
+  <section>
+    <Card className="item card" borderBg="steelblue">
+        <h1 style={{}}>Card Title</h1>
+        <p>Custom border color</p>
+    </Card>
+  </section>
+  <section>
+    <Card className="item card" padding="20px">
+        <h1 style={{}}>Card Title</h1>
+        <p>Custom padding inside of card</p>
+    </Card>
+  </section>
+  <section>
+    <Card className="item card" radius="15px">
+        <h1 style={{}}>Card Title</h1>
+        <p>Custom border radius on card</p>
+    </Card>
+  </section>
+</main>
+
+```jsx
+<Card className="item card" borderBg="steelblue">
+    <h1>Card Title</h1>
+    <p>Custom border color</p>
+</Card>
+<Card className="item card" padding="20px">
+    <h1>Card Title</h1>
+    <p>Custom padding inside of card</p>
+</Card>
+<Card className="item card" radius="15px">
+    <h1>Card Title</h1>
+    <p>Custom border radius on card</p>
+</Card>
+```

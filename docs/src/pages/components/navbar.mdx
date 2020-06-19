@@ -1,0 +1,174 @@
+import SEO from '../../components/seo'
+import { Navbar, NavLink } from 'godspeed'
+import logo from '../../assets/logo-white.png'
+
+<SEO title="Navbar" description="hello description" />
+
+# 
+# Navbar
+## Navbar allow the user to execute events, actions or to navigate.
+### Default Behavior
+- Position is 'fixed'
+- Top of the view port at '0px'
+- Width '100%' of the parent
+- Note: Should be lifted to parent with width of '100vw'
+
+<br/>
+
+```js
+import { Navbar } from 'godspeed'
+```
+<br/>
+
+# Default Navbars
+
+## These come out of the box, dark with white text.
+## The "title" prop is required on all navbar instances.
+## This component expects children.
+### Navbar Items Behavior
+
+- Navbar is a flexbox
+- Items are 'space-between'
+- Title is at 'flex-start'
+- Children are at pushed to end by 'space-between'
+
+You can pass the "bg" prop to change the background of the navbar.
+
+You can pass the "color" prop to change the font color of the navbar.
+
+<main style={{width: '100%', marginTop: 20, marginBottom: 20, border: '1px solid black', borderRadius: 5, padding: '20px 0'}}>
+  <Navbar title="Navbar" style={{ position: 'unset' }}>
+    <a href="#" style={{ marginRight: 10 }}>Link</a>
+    <a href="#" style={{ marginRight: 10 }}>Link</a>
+    <a href="#">Link</a>
+  </Navbar>
+  <br/>
+  <Navbar title="Navbar" style={{ position: 'unset' }} bg="rgb(200, 200, 200)" color="steelblue" >
+    <a href="#" style={{ marginRight: 10 }}>Link</a>
+    <a href="#" style={{ marginRight: 10 }}>Link</a>
+    <a href="#">Link</a>
+  </Navbar>
+</main>
+
+```jsx
+<Navbar title="Navbar">
+  <a href="#">Item</a>
+  <a href="#">Item</a>
+  <a href="#">Link</a>
+</Navbar>
+<br />
+<Navbar title="Navbar" bg="rgb(200, 200, 200)" color="steelblue">
+  <a href="#">Item</a>
+  <a href="#">Item</a>
+  <a href="#">Link</a>
+</Navbar>
+```
+
+# 
+# NavLinks
+
+## A Navbar specific component to act as a link or button.
+## This component expects children.
+<br/>
+
+```js
+import { NavLink } from 'godspeed'
+```
+<br/>
+
+### NavLink Behavior
+- Heigth of parent '100%'
+- Background color 'transparent'
+- Hover color is Navbar color lightened
+- Items, except last item, have margin right '10px'
+- Note: Use 'to' prop to act as link, 'onClick' prop to act as action button
+- The font color is 'inherit' from the parent
+
+## You can pass the "hover" prop to change the hover color of the navLink.
+
+<main style={{width: '100%', marginTop: 20, marginBottom: 20, border: '1px solid black', borderRadius: 5, padding: '20px 0'}}>
+  <Navbar title="Navbar" style={{ position: 'unset' }}>
+    <NavLink to="#">Link</NavLink>
+    <NavLink onClick={() => window.location.href = '#'}>Button</NavLink>
+  </Navbar>
+  <br />
+  <Navbar title="Navbar" style={{ position: 'unset' }}>
+    <NavLink to="#" hover="steelblue">Custom Hover</NavLink>
+    <NavLink to="#" >Default Hover</NavLink>
+  </Navbar>
+</main>
+
+```jsx
+<Navbar title="Navbar">
+  <NavLink to="#">Link</NavLink>
+  <NavLink onClick={() => console.log('Godspeed')}>Button</NavLink>
+</Navbar>
+<Navbar title="Navbar">
+  <NavLink to="#" hover="steelblue">Custom Hover</NavLink>
+  <NavLink to="#">Default Hover</NavLink>
+</Navbar>
+```
+
+# 
+# Customized Navbars
+
+<main style={{width: '100%', marginTop: 20, marginBottom: 20, border: '1px solid black', borderRadius: 5, padding: '20px 0'}}>
+  <Navbar title="Navbar" style={{ position: 'unset' }} shadow>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+  </Navbar>
+  <br />
+  <Navbar title="Navbar" style={{ position: 'unset' }} height="100px">
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+  </Navbar>
+  <br />
+  <Navbar title="Navbar" style={{ position: 'unset' }} inv>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+  </Navbar>
+</main>
+
+```jsx
+<Navbar title="Navbar" shadow>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+</Navbar>
+<Navbar title="Navbar" height="55px">
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+</Navbar>
+<Navbar title="Navbar" inv>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+</Navbar>
+```
+
+# 
+# Navbar Logos
+
+You can pass the "logo" prop with an image to add your logo to the center.
+
+<main style={{width: '100%', marginTop: 20, marginBottom: 20, border: '1px solid black', borderRadius: 5, padding: '20px 0'}}>
+  <Navbar title="Navbar" style={{ position: 'unset' }} logo={logo}>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+    <NavLink to="#">Link</NavLink>
+  </Navbar>
+</main>
+
+```jsx
+import logo from '../images/godspeed-logo.png'
+
+<Navbar title="Navbar" logo={logo}>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+  <NavLink to="#">Link</NavLink>
+</Navbar>
+```

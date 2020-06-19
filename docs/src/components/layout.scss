@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: darken(white, 40%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: darken(white, 70%);
+  border-radius: 5px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+::-webkit-scrollbar-track:horizontal {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: darken(white, 70%);
+  border-radius: 5px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  line-height: 1.5rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+P {
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$seventeen: rgb(17, 17, 17);
+
+html {
+  background-color: rgb(255, 255, 255);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.root {
+  @include flex;
+  align-items: flex-start;
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1800px;
+}
+
+// HEADER COMPONENT
+.header {
+  @include flex;
+  padding: 25px;
+  width: 100%;
+  user-select: none;
+  background-color: $seventeen;
+  main {
+    * {
+      color: white;
+    }
+    @include flex;
+    justify-content: space-between;
+    width: 50%;
+    a {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .ham {
+      cursor: pointer;
+      padding: 15px;
+      transition: all 0.2s;
+      &:hover {
+        transition: all 0.2s;
+        background-color: rgb(31, 31, 31);
+      }
+    }
+  }
+}
+
+.footer {
+  @include flex;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 50px;
+  color: white;
+  cursor: default;
+  background-color: $seventeen;
+}
+
+// SIDE DRAWER
+.drawer {
+  height: 100%;
+  overflow: scroll;
+  text-align: center;
+  user-select: none;
+  padding: 10px 0px 70px;
+  * {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+  }
+  h1:not(:first-child) {
+    border-top: 1px solid white;
+  }
+  h1 {
+    border-bottom: 1px solid white;
+    padding: 5vh;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  p {
+    margin: 1px 0;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgb(31, 31, 31);
+      transition: all 0.3s;
+    }
+  }
+  .icons {
+    * {
+      box-sizing: content-box;
+    }
+    @include flex;
+    flex-direction: column;
+    .github {
+      cursor: pointer;
+      width: 25px;
+      padding: 5px;
+    }
+    .npm {
+      cursor: pointer;
+      width: 35px;
+      padding: 5px;
+      margin: 10px;
+    }
+  }
+}
+
+// PRE CODE BLOCK
+pre {
+  display: block;
+  width: fit-content;
+  padding: 10px 15px;
+  color: white;
+  overflow-x: scroll;
+  font-size: 0.9rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: rgb(25, 25, 25);
+  * {
+    font-family: Consolas;
+    letter-spacing: -0.2px;
+  }
+}
+
+// DOCUMENTATION
+.documentation {
+  @include flex;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 800px;
+  max-width: 800px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 800px) {
+  .app {
+    height: 100%;
+  }
+  * {
+    font-size: 14px;
+  }
+  .header {
+    padding: 3px 10px;
+    main {
+      width: 100%;
+      a {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .ham {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .documentation {
+    min-width: unset;
+    width: 95vw;
+  }
+}

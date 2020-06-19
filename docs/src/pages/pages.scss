@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: darken(white, 70%);
+  border-radius: 5px;
+}
+
+html {
+  background-color: rgb(255, 255, 255);
+}
+
+// PAGE 404
+.four-oh-four {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$example-box: rgb(240, 240, 240);
+
+// INDEX PAGE
+.homepage {
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  pre {
+    width: 100%;
+  }
+  .intro {
+    @include flex;
+    flex-direction: row;
+    padding: 100px 0px;
+    max-width: 100%;
+    .logo {
+      width: 300px;
+      margin: 0px 50px 0px 0px;
+    }
+    main {
+      header {
+        font-size: 4rem;
+        padding-bottom: 50px;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .get-started {
+    @include flex;
+    height: fit-content;
+    width: 1000px;
+    max-width: 100%;
+    align-items: stretch;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-width: 3px 2px;
+    background-color: rgb(200, 200, 200);
+    margin: 0px 10px;
+    h1,
+    p,
+    footer {
+      padding: 10px 0px;
+    }
+    h1 {
+      font-weight: 500;
+    }
+    .installation,
+    .usage {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 20px;
+      border: 0px solid rgb(0, 0, 0);
+      border-width: 0px 1px;
+    }
+  }
+}
+
+// //DOCUMENTATION
+.documentation {
+  word-wrap: wrap;
+  width: 100%;
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  .sub-title {
+    padding-top: 10px;
+    font-weight: 500;
+  }
+  .par {
+    padding-top: 10px;
+  }
+  .list-head {
+    padding-top: 10px;
+    font-weight: 600;
+  }
+  .list {
+    li:first-child {
+      padding-top: 10px;
+    }
+    li {
+      list-style: circle;
+      text-indent: 20px;
+    }
+  }
+  pre {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .visualize {
+    width: 100%;
+    margin: 30px 0;
+    .examples {
+      @include flex;
+      justify-content: space-evenly;
+      padding: 20px 0;
+      border-radius: 5px;
+      border: 1px solid black;
+      background-color: $example-box;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .four-oh-four {
+    height: 90vh;
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  .homepage {
+    .intro {
+      flex-direction: column;
+      height: unset;
+      padding: 50px 0px 75px;
+      .logo {
+        width: 200px;
+        margin: 0px 0px 50px 0px;
+      }
+      main {
+        header {
+          text-align: center;
+        }
+      }
+    }
+    .get-started {
+      width: 95%;
+      min-width: unset;
+      flex-direction: column;
+      border-width: 2px 3px;
+      .installation,
+      .usage {
+        padding: 10px 15px;
+        width: unset;
+        border-width: 1px 0px;
+      }
+    }
+  }
+  .documentation {
+    width: 95vw;
+    .examples {
+      flex-direction: column;
+      .item {
+        margin: 10px;
+      }
+    }
+  }
+}

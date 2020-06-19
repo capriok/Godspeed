@@ -1,0 +1,31 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder::placeholder{color: steelblue;}
+
+.card{
+  h1{padding-bottom: 10px;}
+}
+
+.column{
+  flex-direction: column;
+  .item:not(:last-child){margin-bottom: 20px;}
+}
+
+.drawer-content{
+  h1, p{
+    margin: 20px 0;
+  }
+  div{
+    @include flex;
+    flex-direction: column;
+    a:not(:first-child){padding-top: 20px;}
+    a{
+      width: 100%;
+      border-bottom: 1px solid steelblue;
+    }
+  }
+}

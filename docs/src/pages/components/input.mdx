@@ -1,0 +1,110 @@
+import SEO from '../../components/seo'
+import { Input } from 'godspeed'
+
+<SEO title="Input" description="hello description" />
+
+# 
+# Input
+## Inputs allow the user to enter information which will be used by the application.
+### Commonly used types
+- Text
+- Password
+- Time
+- Button
+
+<br/>
+
+```js
+import { Input }  from 'godspeed'
+```
+<br/>
+
+# Default Inputs
+## These come out of the box, light with dark text.
+
+The "placeholder" prop is required on all input instances.
+
+Use the psudo-element "::placeholder" to change the placeholder appearance.
+
+<main>
+  <section>
+    <Input placeholder="Standard" />
+  </section>
+  <section>
+    <Input placeholder="Standard"/>
+  </section>
+</main>
+
+```jsx
+<Input placeholder="Standard" />
+<Input placeholder="Standard" /> //::placeholder{color: steelblue;}
+```
+<br/>
+
+# Customized Inputs
+
+You can pass the "shadow" prop to give the input a shadow.
+
+You can pass the "underlined" prop to remove the background and underline the input.
+
+You can pass the "autoFocus" prop to focus the input.
+
+<main>
+  <section>
+    <Input placeholder="Shadow" shadow />
+  </section>
+  <section>
+    <Input placeholder="Underlined" underlined />
+  </section>
+  <section>
+    <Input placeholder="autoFocus" />
+  </section>
+</main>
+
+```jsx
+<Input placeholder="Shadow" shadow />
+<Input placeholder="Underlined" underlined />
+<Input placeholder="Focus" autoFocus={true} />
+```
+<br/>
+
+You can pass the "error" prop to show the input has an error.
+
+You can pass the "disabled" prop to disable the input.
+
+<main>
+  <section>
+    <Input placeholder="Error" error />
+  </section>
+  <section>
+    <Input placeholder="Disabled" disabled />
+  </section>
+</main>
+
+```jsx
+<Input placeholder="Error" error={true} /> 
+<Input placeholder="Disabled" disabled={true} /> 
+```
+<br/>
+
+# Underlined Inputs
+
+You can pass multiple props.
+
+<main>
+  <section>
+    <Input placeholder="Underlined" underlined />
+  </section>
+  <section>
+    <Input placeholder="Underlined with Shadow" underlined shadow />
+  </section>
+  <section>
+    <Input placeholder="Underlined with Error" underlined error />
+  </section>
+</main>
+
+```jsx
+<Input placeholder="Underlined" underlined />
+<Input placeholder="Underlined with Shadow" underlined shadow/>
+<Input placeholder="Underlined with Error" underlined error={true}/>
+```

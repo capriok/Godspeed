@@ -1,0 +1,131 @@
+import SEO from '../../components/seo'
+import { Button } from 'godspeed'
+
+<SEO title="Button" description="hello description" />
+
+# 
+# Button
+## Buttons allow the user to execute events, actions or to navigate.
+### Common use places
+- Forms
+- Cards
+- Modals
+- Dialogs
+
+<br/>
+
+```jsx
+import { Button } from 'godspeed`
+```
+<br/>
+
+# Default Buttons
+## These come out of the box, dark with white text.
+The "text" prop is required on all button instances.
+
+You can pass the "bg" prop to change the background of the button.
+
+You can pass the "color" prop to change the font color of the button.
+
+<main>
+  <section>
+    <Button text="Button" />
+  </section>
+  <section>
+    <Button text="Button" bg="steelblue" />
+  </section>
+  <section>
+    <Button text="Button" bg="steelblue" color="black" />
+  </section>
+</main>
+
+```jsx
+<Button text="Button" />
+<Button text="Button" bg="steelblue" />
+<Button text="Button" bg="steelblue" color="black" />
+```
+<br/>
+
+# Customized Buttons
+You can pass the "to" prop to create a link button.
+
+<main>
+  <section>
+    <Button text="Button" to="#" />
+  </section>
+</main>
+
+```jsx
+<Button text="Button" to="#" /> 
+```
+<br/>
+
+You can pass the "clear" prop to create a clear button.
+
+You can pass the "bg" prop to change the border color.
+
+You can pass the "color" prop to change the font color.
+
+<main>
+  <section>
+    <Button text="Button" clear />
+  </section>
+  <section>
+    <Button text="Button" clear bg="steelblue" />
+  </section>
+  <section>
+    <Button text="Button" clear color="steelblue" />
+  </section>
+</main>
+
+```jsx
+<Button text="Button" clear />
+<Button text="Button" clear bg="steelblue" />
+<Button text="Button" clear color="steelblue" />
+```
+<br/>
+
+You can pass the "shadow" prop to add shadow to the button.
+
+You can pass the "disabled" prop to disable the button.
+
+<main>
+  <section>
+    <Button text="Button" shadow />
+  </section>
+  <section>
+    <Button text="Button" disabled={true} />
+  </section>
+</main>
+
+```jsx
+<Button text="Button" shadow />
+<Button text="Button" disabled={true} />
+```
+<br/>
+
+# Sizes
+You can pass the "size" prop to change the font size.
+
+Default: "sm" (1rem: 16px)
+<main>
+  <section>
+    <Button text="Button" size="xsm" />
+  </section>
+  <section>
+    <Button text="Button" size="sm" />
+  </section>
+  <section>
+    <Button text="Button" size="md" />
+  </section>
+  <section>
+    <Button text="Button" size="lg" />
+  </section>
+</main>
+
+```jsx
+<Button text="Button" size="xsm" />
+<Button text="Button" size="sm" />
+<Button text="Button" size="md" />
+<Button text="Button" size="lg" />
+```

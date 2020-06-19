@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# gatsby files
+.cache/
+public
+
+# dotenv environment variable files
+.env*
