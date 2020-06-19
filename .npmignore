@@ -1,6 +1,7 @@
-/lib
-/testing
+/.vscode
+/.testing
 /docs
+/lib
 .babelrc
-.vscode
+.eslintrc.js
 CODE_OF_CONDUCT.md

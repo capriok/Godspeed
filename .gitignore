@@ -1,9 +1,7 @@
-.DS_Store
-.vscode
 dist
+index.js
 /docs
-/trash
-/testing
+/.testing
 
 # Dependency directories
 node_modules/
@@ -16,3 +14,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# vscode settings
+.vscode
