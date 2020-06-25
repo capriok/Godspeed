@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://godspeed.netlify.app/" rel="noopener" target="_blank"><img width="150" src="https://svgshare.com/s/MHj" alt="Material-UI logo"></a>
+  <a href="https://godspeed.netlify.app/" rel="noopener" target="_blank"><img width="150" src="https://svgshare.com/i/MHj.svg" alt="Godspeed Logo"></a>
 </p>
 
 <h1 align="center">Godspeed</h1>
