@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
-    "godspeed": "^1.4.11",
+    "godspeed": "^1.4.31",
     "ios-inner-height": "^1.1.1",
     "node-sass": "^4.13.1",
     "prism-react-renderer": "^1.0.2",
