@@ -19,7 +19,7 @@ const SideDrawer = ({ drawer, setDrawer }) => {
     >
       <div className="drawer">
         <h1>Godspeed</h1>
-        <Link to="/release-notes"><p>v1.3.6</p></Link>
+        <Link to="/release-notes"><p>v1.4.35</p></Link>
         <div className="icons">
           <a href="https://github.com/capriok"
             target="_blank"

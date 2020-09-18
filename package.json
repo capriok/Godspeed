@@ -5,6 +5,7 @@
   "main": "/index.js",
   "scripts": {
     "build": "babel lib -d dist --copy-files",
+    "buildDocs": "cd docs && gatsby build",
     "prepublish": "npm run build"
   },
   "repository": {
