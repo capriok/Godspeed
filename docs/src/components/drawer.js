@@ -6,6 +6,8 @@ import useLockBodyScroll from './hooks/useLockBodyScroll'
 import githubIcon from '../assets/github-icon.png'
 import npmIcon from '../assets/npm-icon.png'
 
+import pj from '../../package.json'
+
 const SideDrawer = ({ drawer, setDrawer }) => {
   useLockBodyScroll()
 
@@ -19,7 +21,7 @@ const SideDrawer = ({ drawer, setDrawer }) => {
     >
       <div className="drawer">
         <h1>Godspeed</h1>
-        <Link to="/release-notes"><p>v1.4.35</p></Link>
+        <Link to="/release-notes"><p>v{pj.dependencies.godspeed.substring(1)}</p></Link>
         <div className="icons">
           <a href="https://github.com/capriok"
             target="_blank"
