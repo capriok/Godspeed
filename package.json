@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel lib -d dist --copy-files",
     "prepublish": "npm run build",
-    "buildDocs": "cd docs && npm run build"
+    "build-docs": "cd docs && npm run build"
   },
   "repository": {
     "type": "git",
