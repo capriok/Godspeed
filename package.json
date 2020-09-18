@@ -5,8 +5,7 @@
   "main": "/index.js",
   "scripts": {
     "build": "babel lib -d dist --copy-files",
-    "prepublish": "npm run build",
-    "build-docs": "cd docs && npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
