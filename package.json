@@ -1,12 +1,12 @@
 {
   "name": "godspeed",
-  "version": "1.4.35",
+  "version": "2.0.0",
   "description": "styled components",
   "main": "/index.js",
   "scripts": {
     "build": "babel lib -d dist --copy-files",
     "prepublish": "npm run build",
-    "postversion": "cd docs && npm i godspeed@latest"
+    "postpublish": "cd docs && npm i godspeed@latest && cd.."
   },
   "repository": {
     "type": "git",
