@@ -21,7 +21,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button }  from 'godspeed';
 
-
 function App() {
   return (
     <Button onClick={() => console.log('Godspeed')} />
