@@ -13,7 +13,6 @@ Godspeed is available as an [npm package](https://www.npmjs.com/package/godspeed
 ```sh
 npm install godspeed --save
 ```
- Installation via yarn coming with the release of version 2
 
 ## Usage
 ```js
