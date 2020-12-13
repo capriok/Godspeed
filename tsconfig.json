@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"outDir": "tsdist",
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"jsx": "react"
+	}
+}

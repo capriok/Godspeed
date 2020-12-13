@@ -2,16 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
-const height = props => props.height || '55px'
-const bg = props => props.bg || 'rgb(17, 17, 17)'
-const color = props => props.color || 'white'
-const titleFont = props => props.titleFont || 'Alegreya Sans SC'
-const src = props => props.src
+const height = (props: NavbarProps) => props.height || '55px'
+const bg = (props: NavbarProps) => props.bg || 'rgb(17, 17, 17)'
+const color = (props: NavbarProps) => props.color || 'white'
+const titleFont = (props: NavbarProps) => props.titleFont || 'Alegreya Sans SC'
+const src = (props: NavbarProps): any => props.src
 
-const hasShadowProp = props => props.shadow && css`
+const hasShadowProp = (props: NavbarProps): any => props.shadow && css`
   box-shadow: 0px 3px 15px -5px black;
 `
-const hasInvProp = props => props.inv && css`
+const hasInvProp = (props: NavbarProps): any => props.inv && css`
   flex-direction: row-reverse;
 `
 
@@ -74,35 +74,16 @@ const Img = styled.img`
   max-height: 45px;
 `
 
-const Navbar = ({
-  children,
-  className,
-  style,
-  title,
-  titleFont,
-  to,
-  bg,
-  color,
-  logo,
-  height,
-  shadow,
-  inv
-}) => (
-    <Nav
-      className={className}
-      style={style}
-      bg={bg}
-      color={color}
-      height={height}
-      shadow={shadow}>
-      <Items inv={inv}>
-        <Title titleFont={titleFont}>
-          {to ? <Link to={to}>{title}</Link> : <h1>{title}</h1>}
-        </Title>
-        {logo && <Logo><Img src={logo} /></Logo>}
-        <Links>{children}</Links>
-      </Items>
-    </Nav>
-  )
+const Navbar: React.FC<NavbarProps> = ({ children, className, style, height, title, titleFont, to, bg, color, logo, shadow, inv }) => (
+  <Nav className={className} style={style} bg={bg} color={color} height={height} shadow={shadow}>
+    <Items inv={inv}>
+      <Title titleFont={titleFont}>
+        {to ? <Link to={to}>{title}</Link> : <h1>{title}</h1>}
+      </Title>
+      {logo && <Logo><Img src={logo} /></Logo>}
+      <Links>{children}</Links>
+    </Items>
+  </Nav>
+)
 
 export default Navbar

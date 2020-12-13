@@ -136,7 +136,7 @@ const component = {
         {...defaultProps}
         code={props.children.props.children}
         theme={theme}
-        language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ''} >
+        language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ''}>
         {({ tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={pre}>
             {tokens.filter((t) => t[1]).map((line, i) => (

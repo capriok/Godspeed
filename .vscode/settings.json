@@ -2,7 +2,7 @@
   "saveAndRun": {
     "commands": [
       {
-        "match": ".js$",
+        "match": ".ts|.tsx",
         "cmd": "npm run build",
         "useShortcut": true
       }

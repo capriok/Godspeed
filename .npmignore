@@ -4,4 +4,5 @@
 /lib
 .babelrc
 .eslintrc.js
+tsconfig.json
 CODE_OF_CONDUCT.md

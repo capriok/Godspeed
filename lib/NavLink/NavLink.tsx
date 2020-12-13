@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const color = props => props.color || 'inherit'
-const hoverColor = props => props.hover || 'rgb(25, 25, 25)'
+const color = (props: NavlinkProps) => props.color || 'inherit'
+const hoverColor = (props: NavlinkProps) => props.hover || 'rgb(25, 25, 25)'
 
 const Link = styled.div`
   *{color: ${color};}
@@ -29,24 +29,10 @@ const Link = styled.div`
   }
 `
 
-const NavLink = ({
-  children,
-  className,
-  style,
-  onClick,
-  to,
-  color,
-  hover
-}) => (
-    <Link
-      className={className}
-      style={style}
-      onClick={onClick}
-      href={to}
-      color={color}
-      hover={hover}>
-      {to ? <a href={to}>{children}</a> : <div>{children}</div>}
-    </Link>
-  )
+const NavLink: React.FC<NavlinkProps> = ({ children, className, style, onClick, to, color, hover }) => (
+  <Link className={className} style={style} onClick={onClick} to={to} color={color} hover={hover}>
+    {to ? <a href={to}>{children}</a> : <div>{children}</div>}
+  </Link>
+)
 
 export default NavLink

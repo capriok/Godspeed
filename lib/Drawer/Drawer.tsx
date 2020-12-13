@@ -12,11 +12,11 @@ const Clickout = styled.div`
   z-index: 8500;
 `
 
-const fromSide = props => props.side || 'right'
-const bg = props => props.bg || 'white'
-const padding = props => props.padding || '20px'
-const color = props => props.color || 'black'
-const border = props => props.borderBg || 'black'
+const fromSide = (props: DrawerProps) => props.side || 'right'
+const bg = (props: DrawerProps) => props.bg || 'white'
+const color = (props: DrawerProps) => props.color || 'black'
+const padding = (props: DrawerProps) => props.padding || '20px'
+const border = (props: DrawerProps) => props.borderBg || 'black'
 
 const Div = styled.div`
   position: fixed;
@@ -32,42 +32,23 @@ const Div = styled.div`
   z-index: 9000;
 `
 
-const Drawer = ({
-  className,
-  children,
-  onClick,
-  open,
-  side,
-  bg,
-  color,
-  padding
-}) => {
+const Drawer: React.FC<DrawerProps | any> = ({ className, children, onClick, open, side, bg, color, padding }) => {
   const fromSide = side || 'right'
   return (
-    < Transition
-      items={open}
-      from={{ [fromSide]: -200, opacity: 0 }}
-      enter={{ [fromSide]: 0, opacity: 1 }}
-      leave={{ [fromSide]: -200, opacity: 0 }}
-      config={{ duration: 200 }}>
+    <Transition items={open} from={{ [fromSide]: -200, opacity: 0 }} enter={{ [fromSide]: 0, opacity: 1 }} leave={{ [fromSide]: -200, opacity: 0 }} config={{ duration: 200 }}>
       {
         open =>
           open &&
           (props => (
             <div style={props}>
               <Clickout onClick={onClick} />
-              <Div
-                style={props}
-                className={className}
-                bg={bg}
-                color={color}
-                padding={padding}>
+              <Div style={props} className={className} bg={bg} color={color} padding={padding}>
                 {children}
               </Div>
             </div>
           ))
       }
-    </Transition >
+    </Transition>
   );
 }
 
